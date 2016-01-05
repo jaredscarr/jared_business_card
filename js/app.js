@@ -11,6 +11,9 @@ Projects.prototype.toHtml = function() {
   $newProject.data('title', this.title);
   $newProject.data('datePublished', this.datePublished);
   $newProject.data('details', this.details);
+
+  $newProject.removeClass('template');
+  return newProject;
 }
 
 // portfolioItems.sort(function(a,b) {
