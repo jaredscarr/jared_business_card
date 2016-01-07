@@ -17,7 +17,7 @@ Project.prototype.toHtml = function() {
   $newProject.data('link', this.link);
 
   $newProject.removeClass('template');
-  return newProject;
+  return $newProject;
 }
 
 projectsList.sort(function(a,b) {
