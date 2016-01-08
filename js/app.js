@@ -1,29 +1,30 @@
 var portfolioItems = [];
 
-function Projects (project) {
+function Project (project) {
   this.title = project.title;
   this.datePublished = project.datePublished;
-  this.details = project.details.
+  this.details = project.details;
+  this.image = project.image;
+  this.link = project.link;
 }
 
-Projects.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.data('title', this.title);
-  $newProject.data('datePublished', this.datePublished);
-  $newProject.data('details', this.details);
+Project.prototype.toHtml = function() {
+  var templateScript = $('#project-template').html();
+  var compiledTemplate = Handlebars.compile(templateScript);
+  this.daysAgo = parseInt((new Date() - new Date(this.datePublished))/60/60/24/1000);
+  this.publishStatus = this.datePublished ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  var html = compiledTemplate(this);
+  $('#portfolio').append(html);
+};
 
-  $newProject.removeClass('template');
-  return newProject;
-}
+projectsList.sort(function(a,b) {
+  return (new Date(b.datePublished)) - (new Date(a.datePublished));
+});
 
-// portfolioItems.sort(function(a,b) {
-//   return (new Date(b.datePublished)) - (new Date(a.datePublished));
-// });
+projectsList.forEach(function(ele) {
+  portfolioItems.push(new Project(ele));
+});
 
-// ADDPROJECTFILESHERE.forEach(function(ele) {
-//   portfolioItems.push(new Article(ele));
-// });
-
-// portfolioItems.forEach(function(a){
-//   $('#portfolio').append(a.toHtml())
-// });
+portfolioItems.forEach(function(a){
+  $('#portfolio').append(a.toHtml());
+});
