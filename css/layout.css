@@ -1,4 +1,18 @@
 /*put the nav bar in line to test responsiveness. Move Later.*/
-.main-nav li {
+.display-inline, footer li {
   display: inline;
+}
+
+.align-right {
+  text-align: right;
+}
+
+@media only screen and (min-width: 640px) {
+  .main-nav li {
+    display: inline;
+  }
+
+  .icon-menu3, .icon-menu4 {
+    display:none;
+  }
 }
