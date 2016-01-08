@@ -9,16 +9,13 @@ function Project (project) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.data('title', this.title);
-  $newProject.data('datePublished', this.datePublished);
-  $newProject.data('details', this.details);
-  $newProject.data('image', this.image);
-  $newProject.data('link', this.link);
-
-  $newProject.removeClass('template');
-  return $newProject;
-}
+  var templateScript = $('#project-template').html();
+  var compiledTemplate = Handlebars.compile(templateScript);
+  this.daysAgo = parseInt((new Date() - new Date(this.datePublished))/60/60/24/1000);
+  this.publishStatus = this.datePublished ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  var html = compiledTemplate(this);
+  $('#portfolio').append(html);
+};
 
 projectsList.sort(function(a,b) {
   return (new Date(b.datePublished)) - (new Date(a.datePublished));
@@ -29,5 +26,5 @@ projectsList.forEach(function(ele) {
 });
 
 portfolioItems.forEach(function(a){
-  $('#portfolio').append(a.toHtml())
+  $('#portfolio').append(a.toHtml());
 });
