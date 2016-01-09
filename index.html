@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Business Card</title>
-    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/modules.css">
@@ -15,35 +15,51 @@
       <h2>Name</h2>
       <h4>slogan</h4>
     </header>
-    <nav class="main-nav">
-      <div id="drop-down" class="icon-menu">
-        <ul>
-          <li>Home</li>
-          <li>Projects</li>
-          <li>Collaborate</li>
-          <li>About</li>
+    <nav class="main-nav align-right">
+      <a href="#" id="drop-down" class="icon-menu align-right"></a>
+        <ul class="align-right">
+          <li class="tab" data-content="main"><a href="#">Home</a></li>
+          <li class="tab" data-content="portfolio"><a href="#">Projects</a></li>
+          <!-- <li><a href="#">Collaborate</a></li> -->
+          <li class="tab" data-content="about"><a href="#">About</a></li>
         </ul>
-      </div>
-      <div class=".icon-menu3"></div>
     </nav>
-    <section id="main">
-
+    <section id="main" class="tab-content">
+      <h1>HOME</h1>
     </section>
-    <section id="portfolio">
-      <article class="template">
-
-      </article>
+    <section id="portfolio" class="tab-content">
+      <script id="project-template" type="text/x-handlebars-template">
+        <article>
+          <header>
+            <h1>{{title}}</h1>
+            <div class="">
+              <time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time>
+                <address>Visit <a href="{{link}}">{{{link}}}</a></address>
+            </div>
+          </header>
+          <section class="project-body">{{{details}}}</section>
+          <a href="#" class="read-on">More &rarr;</a> <!-- &arr must be arrow-->
+        </article>
+      </script>
+    </section>
+    <section id="about" class="tab-content">
+      <h1>About</h1>
+      <p>
+        Some text here!
+      </p>
     </section>
     <footer>
       <p>Copyright</p>
       <ul>
-        <li><a href="#"></a>Facebook</li>
-        <li><a href="#">Twitter</li>
-        <li><a href="#">GitHub</li>
+        <li><a class="icon-facebook2" href="#"></a></li>
+        <li><a class="icon-twitter"href="#"></a></li>
+        <li><a class="icon-github" href="#"></a></li>
       </ul>
     </footer>
     <script src="js/jquery-1.11.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script src="js/projects.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/projectView.js"></script>
+    <script src="js/stateChanges.js"></script>
   </body>
 </html>
