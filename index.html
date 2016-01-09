@@ -18,13 +18,16 @@
     <nav class="main-nav align-right">
       <a href="#" id="drop-down" class="icon-menu align-right"></a>
         <ul class="align-right">
-          <li>Home</li>
-          <li>Projects</li>
-          <li>Collaborate</li>
-          <li>About</li>
+          <li class="tab" data-content="main"><a href="#">Home</a></li>
+          <li class="tab" data-content="portfolio"><a href="#">Projects</a></li>
+          <!-- <li><a href="#">Collaborate</a></li> -->
+          <li class="tab" data-content="about"><a href="#">About</a></li>
         </ul>
     </nav>
-    <section id="portfolio">
+    <section id="main" class="tab-content">
+      <h1>HOME</h1>
+    </section>
+    <section id="portfolio" class="tab-content">
       <script id="project-template" type="text/x-handlebars-template">
         <article>
           <header>
@@ -34,10 +37,16 @@
                 <address>Visit <a href="{{link}}">{{{link}}}</a></address>
             </div>
           </header>
-          <section class="">{{{details}}}</section>
+          <section class="project-body">{{{details}}}</section>
           <a href="#" class="read-on">More &rarr;</a> <!-- &arr must be arrow-->
         </article>
       </script>
+    </section>
+    <section id="about" class="tab-content">
+      <h1>About</h1>
+      <p>
+        Some text here!
+      </p>
     </section>
     <footer>
       <p>Copyright</p>

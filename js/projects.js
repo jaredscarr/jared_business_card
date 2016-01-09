@@ -14,7 +14,7 @@ var projectsList = [
     link: '<a href="https://github.com/jaredscarr/votetracker-jared"></a>'
   },
   {
-    title: "Snookie's Cookies",
+    title: 'Snookie\'s Cookies',
     datePublished: '2015-11-10',
     details: 'Salmon cookies made with fish, salmon cookies are delish!',
     image: 'salmon',
