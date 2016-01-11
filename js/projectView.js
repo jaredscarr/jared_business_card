@@ -1,8 +1,10 @@
+var filters = {};
 var portfolioItems = [];
 
 function Project (project) {
   this.title = project.title;
   this.datePublished = project.datePublished;
+  this.category = project.category;
   this.details = project.details;
   this.image = project.image;
   this.link = project.link;
@@ -17,6 +19,30 @@ Project.prototype.toHtml = function() {
   $('#portfolio').append(html);
 };
 
+//start filtering code bellow inside of filters object
+filters.populateFilter = function() {
+  $('article').each(function() {
+    var val = $(this).find('.cat').text();
+    var optionTag = '<option value="' + val + '">' + val + '</option>';
+    if ($('#category-filter option[value="' + val + '"]').length === 0) {
+      $('#category-filter').append(optionTag);
+    }
+  });
+};
+
+filters.handleFilter = function() {
+  $('#category-filter').on('change', function() {
+    if ($(this).val()) {
+      $('article').hide();
+      $('article[data-category="' + $(this).val() + '"]').fadeIn();
+    } else {
+      $('article').fadeIn();
+    }
+  });
+};
+
+//call functions
+
 projectsList.sort(function(a,b) {
   return (new Date(b.datePublished)) - (new Date(a.datePublished));
 });
@@ -27,4 +53,9 @@ projectsList.forEach(function(ele) {
 
 portfolioItems.forEach(function(a){
   $('#portfolio').append(a.toHtml());
+});
+
+$(function(){
+  filters.populateFilter();
+  filters.handleFilter();
 });

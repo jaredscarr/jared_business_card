@@ -2,10 +2,6 @@ img {
   max-width: 100%;
 }
 
-.main-nav ul {
-  display: hidden;
-}
-
 li {
   list-style: none;
 }

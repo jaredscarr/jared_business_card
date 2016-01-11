@@ -20,8 +20,18 @@ stateChange.expandProject = function() {
   $('.project-body').hide();
   $('#portfolio').on('click', 'a.read-on', function(e) {
     e.preventDefault();
-    $(this).parent().find('*').fadeIn();
+    $(this).parent().find('*').slideDown();
     $(this).hide();
+    $('.read-less').show();
+  });
+};
+
+stateChange.truncateProject = function () {
+  $('.read-less').hide();
+  $('#portfolio').on('click', 'a.read-less', function(e) {
+    $(this).hide();
+    $('.project-body').slideUp();
+    $('.read-on').show();
   });
 };
 
@@ -29,4 +39,5 @@ $(document).ready(function() {
   stateChange.menuToggle();
   stateChange.tabsToggle();
   stateChange.expandProject();
+  stateChange.truncateProject();
 });
