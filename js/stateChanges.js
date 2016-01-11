@@ -14,7 +14,6 @@ stateChange.tabsToggle = function() {
   });
 
   $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
-  $('.main-nav ul').hide(); // this kind of fixes the problem but looks strange on load
 };
 
 stateChange.expandProject = function() {

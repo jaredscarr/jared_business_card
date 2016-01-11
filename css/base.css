@@ -2,11 +2,6 @@ img {
   max-width: 100%;
 }
 
-.main-nav ul {
-  display: hidden; /*this is being overridden. I'm not sure why but I believe it's because of the event handler on line 16 in stateChanges.js*/
-  /*position: absolute;  <--this prevents pushing the other stuff down the page but changes the location of the menu*/
-}
-
 li {
   list-style: none;
 }
