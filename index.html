@@ -39,17 +39,17 @@
           </ul>
         </div>
         <script id="project-template" type="text/x-handlebars-template">
-          <article>
+          <article data-category="{{category}}">
             <header>
               <h1>{{title}}</h1>
-              <div class="">
-                <time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time>
-                  <p class="cat">Category: {{category}}</p>
-                  <address>Visit <a href="{{link}}">{{{link}}}</a></address>
-              </div>
+              <ul>
+                <li><time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time></li>
+                <li><p class="cat">{{category}}</p></li>
+              </ul>
             </header>
-            <section class="project-body">{{{details}}}</section> <!-- Need to figure out how to incorporate images into the template-->
-            <a href="#" class="read-on">More &rarr;</a> <!-- &arr must be arrow-->
+            <section class="project-body">{{{details}}}</section>
+            <address class="project-body">Visit <a href="{{link}}">{{{link}}}</a></address>
+            <a href="#" class="read-on">More &rarr;</a>
             <div>{{{image}}}</div>
           </article>
         </script>

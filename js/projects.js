@@ -26,7 +26,7 @@ var projectsList = [
   {
     title: 'Guessing Game',
     datePublished: '2015-11-05',
-    category: 'games',
+    category: 'game',
     details: '',
     image: '<img src="img/guessingGame.png" alt="Guessing Game" />',
     link: '<a href="https://github.com/jaredscarr/guessing-game"></a>'

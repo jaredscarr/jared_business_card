@@ -21,10 +21,23 @@ Project.prototype.toHtml = function() {
 
 //start filtering code bellow inside of filters object
 filters.populateFilter = function() {
-  $('article').each(function() { //each article is actually a aproject
+  $('article').each(function() {
     var val = $(this).find('.cat').text();
     var optionTag = '<option value="' + val + '">' + val + '</option>';
     $('#category-filter').append(optionTag);
+  });
+};
+
+filters.handleFilter = function() {
+  $('#category-filter').on('change', function() {
+    if ($(this).val()) {
+      console.log($(this).val());
+      $('article').hide();
+      $('article[data-category="' + $(this).val() + '"]').fadeIn();
+      console.log($('article[data-category="' + $(this).val() + '"]').fadeIn());
+    } else {
+      $('article').fadeIn();
+    }
   });
 };
 
@@ -44,4 +57,5 @@ portfolioItems.forEach(function(a){
 
 $(function(){
   filters.populateFilter();
+  filters.handleFilter();
 });
