@@ -24,17 +24,17 @@ filters.populateFilter = function() {
   $('article').each(function() {
     var val = $(this).find('.cat').text();
     var optionTag = '<option value="' + val + '">' + val + '</option>';
-    $('#category-filter').append(optionTag);
+    if ($('#category-filter option[value="' + val + '"]').length === 0) {
+      $('#category-filter').append(optionTag);
+    }
   });
 };
 
 filters.handleFilter = function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
-      console.log($(this).val());
       $('article').hide();
       $('article[data-category="' + $(this).val() + '"]').fadeIn();
-      console.log($('article[data-category="' + $(this).val() + '"]').fadeIn());
     } else {
       $('article').fadeIn();
     }
