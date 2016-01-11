@@ -1,8 +1,10 @@
+var filters = {};
 var portfolioItems = [];
 
 function Project (project) {
   this.title = project.title;
   this.datePublished = project.datePublished;
+  this.category = project.category;
   this.details = project.details;
   this.image = project.image;
   this.link = project.link;
@@ -28,3 +30,10 @@ projectsList.forEach(function(ele) {
 portfolioItems.forEach(function(a){
   $('#portfolio').append(a.toHtml());
 });
+
+//start filtering code bellow inside of filters object
+filters.populateFilter = function() {
+  $('article').each(function() { //each article is actually a aproject
+    var val = $(this).find('')
+  });
+};
