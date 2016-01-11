@@ -29,13 +29,22 @@
         <h1>HOME</h1>
       </section>
       <section id="portfolio" class="tab-content">
+        <div>
+          <ul id="filter">
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
         <script id="project-template" type="text/x-handlebars-template">
           <article>
             <header>
               <h1>{{title}}</h1>
               <div class="">
                 <time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time>
-                  <p>Category: {{category}}</p>
+                  <p class="cat">Category: {{category}}</p>
                   <address>Visit <a href="{{link}}">{{{link}}}</a></address>
               </div>
             </header>

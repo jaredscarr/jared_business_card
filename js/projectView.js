@@ -19,6 +19,17 @@ Project.prototype.toHtml = function() {
   $('#portfolio').append(html);
 };
 
+//start filtering code bellow inside of filters object
+filters.populateFilter = function() {
+  $('article').each(function() { //each article is actually a aproject
+    var val = $(this).find('.cat').text();
+    var optionTag = '<option value="' + val + '">' + val + '</option>';
+    $('#category-filter').append(optionTag);
+  });
+};
+
+//call functions
+
 projectsList.sort(function(a,b) {
   return (new Date(b.datePublished)) - (new Date(a.datePublished));
 });
@@ -31,9 +42,6 @@ portfolioItems.forEach(function(a){
   $('#portfolio').append(a.toHtml());
 });
 
-//start filtering code bellow inside of filters object
-filters.populateFilter = function() {
-  $('article').each(function() { //each article is actually a aproject
-    var val = $(this).find('')
-  });
-};
+$(function(){
+  filters.populateFilter();
+});
