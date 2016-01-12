@@ -35,9 +35,15 @@ stateChange.truncateProject = function () {
   });
 };
 
-$(document).ready(function() {
-  stateChange.menuToggle();
-  stateChange.tabsToggle();
-  stateChange.expandProject();
-  stateChange.truncateProject();
-});
+// $(document).ready(function() {
+//   stateChange.menuToggle();
+//   stateChange.tabsToggle();
+//   stateChange.expandProject();
+//   stateChange.truncateProject();
+// });
+
+//new code here
+//this function will append the articles and call functions like lines 38-43
+stateChange.initIndexPage = function() {
+  
+};
