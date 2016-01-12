@@ -51,19 +51,29 @@ filters.handleFilter = function() {
 //   portfolioItems.push(new Project(ele));
 // });
 //
-Project.portfolioItems.forEach(function(a){
-  $('#portfolio').append(a.toHtml());
-});
+// Project.portfolioItems.forEach(function(a){
+//   $('#portfolio').append(a.toHtml());
+// });
 
-$(function(){
+//initializes all filters and nav
+
+Project.initIndexPage = function() {
+  Project.portfolioItems.forEach(function(a){
+    $('#portfolio').append(a.toHtml());
+  });
   filters.populateFilter();
   filters.handleFilter();
-});
+  stateChange.initToggling();
+};
+// $(function(){
+//   filters.populateFilter();
+//   filters.handleFilter();
+// });
 
 
 //new code added
 //this function will take lines 46 - 52 and add them to one functions
-Project.loadAll = function() {
+Project.loadAll = function(data) {
   projectsList.sort(function(a,b) {
     return (new Date(b.datePublished)) - (new Date(a.datePublished));
   });
@@ -75,15 +85,15 @@ Project.loadAll = function() {
 };
 
 //this will retrieve the data from the local source, process it and hand of control to the view
-Project.fetchAll = () {
+Project.fetchAll = function() {
   if (localStorage.data) {
     Project.loadAll(JSON.parse(localStorage.data));
-    [somenamehere].initIndexPage(); //need to figure out what to name this and why
+    Project.initIndexPage(); //need to figure out what to name this and why
   } else {
     $.getJSON('data/projects.json', function(data) {
       Project.loadAll(data);
       localStorage.data = JSON.stringify(data);
-      [somenamehere].initIndexPage(); //need to figure out what to name this and why
+      Project.initIndexPage(); //need to figure out what to name this and why
     });
   }
 };

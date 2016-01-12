@@ -43,7 +43,10 @@ stateChange.truncateProject = function () {
 // });
 
 //new code here
-//this function will append the articles and call functions like lines 38-43
-stateChange.initIndexPage = function() {
-  
+//this function will handle the above calls
+stateChange.initToggling = function() {
+  stateChange.menuToggle();
+  stateChange.tabsToggle();
+  stateChange.expandProject();
+  stateChange.truncateProject();
 };
