@@ -35,9 +35,18 @@ stateChange.truncateProject = function () {
   });
 };
 
-$(document).ready(function() {
+// $(document).ready(function() {
+//   stateChange.menuToggle();
+//   stateChange.tabsToggle();
+//   stateChange.expandProject();
+//   stateChange.truncateProject();
+// });
+
+//new code here
+//this function will handle the above calls
+stateChange.initToggling = function() {
   stateChange.menuToggle();
   stateChange.tabsToggle();
   stateChange.expandProject();
   stateChange.truncateProject();
-});
+};

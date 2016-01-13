@@ -1,5 +1,5 @@
 var filters = {};
-var portfolioItems = [];
+Project.portfolioItems = [];
 
 function Project (project) {
   this.title = project.title;
@@ -43,19 +43,57 @@ filters.handleFilter = function() {
 
 //call functions
 
-projectsList.sort(function(a,b) {
-  return (new Date(b.datePublished)) - (new Date(a.datePublished));
-});
+// projectsList.sort(function(a,b) {
+//   return (new Date(b.datePublished)) - (new Date(a.datePublished));
+// });
+//
+// projectsList.forEach(function(ele) {
+//   portfolioItems.push(new Project(ele));
+// });
+//
+// Project.portfolioItems.forEach(function(a){
+//   $('#portfolio').append(a.toHtml());
+// });
 
-projectsList.forEach(function(ele) {
-  portfolioItems.push(new Project(ele));
-});
+//initializes all filters and nav
 
-portfolioItems.forEach(function(a){
-  $('#portfolio').append(a.toHtml());
-});
-
-$(function(){
+Project.initIndexPage = function() {
+  Project.portfolioItems.forEach(function(a){
+    $('#portfolio').append(a.toHtml());
+  });
   filters.populateFilter();
   filters.handleFilter();
-});
+  stateChange.initToggling();
+};
+// $(function(){
+//   filters.populateFilter();
+//   filters.handleFilter();
+// });
+
+
+//new code added
+//this function will take lines 46 - 52 and add them to one functions
+Project.loadAll = function(data) {
+  projectsList.sort(function(a,b) {
+    return (new Date(b.datePublished)) - (new Date(a.datePublished));
+  });
+
+  projectsList.forEach(function(ele) {
+    Project.portfolioItems.push(new Project(ele));
+    console.log('it ran');
+  });
+};
+
+//this will retrieve the data from the local source, process it and hand of control to the view
+Project.fetchAll = function() {
+  if (localStorage.data) {
+    Project.loadAll(JSON.parse(localStorage.data));
+    Project.initIndexPage(); //need to figure out what to name this and why
+  } else {
+    $.getJSON('data/projects.json', function(data) {
+      Project.loadAll(data);
+      localStorage.data = JSON.stringify(data);
+      Project.initIndexPage(); //need to figure out what to name this and why
+    });
+  }
+};
