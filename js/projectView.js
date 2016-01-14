@@ -1,6 +1,5 @@
 (function(module) {
   var filters = {};
-  filters.linkArray = [];
   Project.portfolioItems = [];
 
   function Project (project) {
@@ -42,22 +41,6 @@
     });
   };
 
-  //call functions
-
-  // projectsList.sort(function(a,b) {
-  //   return (new Date(b.datePublished)) - (new Date(a.datePublished));
-  // });
-  //
-  // projectsList.forEach(function(ele) {
-  //   portfolioItems.push(new Project(ele));
-  // });
-  //
-  // Project.portfolioItems.forEach(function(a){
-  //   $('#portfolio').append(a.toHtml());
-  // });
-
-  //initializes all filters and nav
-
   Project.initIndexPage = function() {
     Project.portfolioItems.forEach(function(a){
       $('#portfolio').append(a.toHtml());
@@ -65,11 +48,8 @@
     filters.populateFilter();
     filters.handleFilter();
     stateChange.initToggling();
+    Project.prototype.loadImages();
   };
-  // $(function(){
-  //   filters.populateFilter();
-  //   filters.handleFilter();
-  // });
 
 
   //new code added
@@ -97,11 +77,21 @@
       });
     }
   };
+  //filter images out of objects into a new array using map
+  Project.prototype.loadImages = function() {
+    var arrayOfImages = Project.portfolioItems.map(function(obj) {
+      return obj.image;
+    });
+    console.log(arrayOfImages);
 
-  filters.getLinks = function(obj) {
-    var link = this.link;
-    filters.linkArray.push(link);
+    var stringifiedLinks = arrayOfImages.reduce(function(prev, current) {
+      return prev + '<li>' + current + '</i>';
+    }, '');
+    console.log('<ul>' + stringifiedLinks + '</ul>');
+    $('#image-nav').append('<ul>' + stringifiedLinks + '</ul>');
   };
+
+  //reduce the new array into a string holding the image links
 
   module.Project = Project;
   module.filters = filters;

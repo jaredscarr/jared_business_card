@@ -4,7 +4,7 @@
   stateChange.menuToggle = function() {
     $('.icon-menu').on('click', function(e) {
       e.preventDefault();
-      $('.main-nav ul').slideToggle('slow');
+      $('.main-nav ul').slideToggle('slow'); //work with hamburger menu toggle with this function remember to work on a new function though. Don't delete this
     });
   };
 
@@ -35,14 +35,6 @@
       $('.read-on').show();
     });
   };
-
-  // $(document).ready(function() {
-  //   stateChange.menuToggle();
-  //   stateChange.tabsToggle();
-  //   stateChange.expandProject();
-  //   stateChange.truncateProject();
-  // });
-
   //new code here
   //this function will handle the above calls
   stateChange.initToggling = function() {

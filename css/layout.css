@@ -11,13 +11,23 @@
   display: none;
 }
 
+.main-nav a {
+  font-size: 2rem;
+}
+
 @media only screen and (min-width: 640px) {
   .main-nav ul {
     display:block;
   }
+
   .main-nav li {
     display: inline;
+    margin-left: 5%;
   }
+
+.main-nav a {
+  font-size: 2rem;
+}
 
   .icon-menu {
     display:none;
