@@ -1,5 +1,6 @@
 (function(module) {
   var filters = {};
+  filters.linkArray = [];
   Project.portfolioItems = [];
 
   function Project (project) {
@@ -20,7 +21,6 @@
     $('#portfolio').append(html);
   };
 
-  //start filtering code bellow inside of filters object
   filters.populateFilter = function() {
     $('article').each(function() {
       var val = $(this).find('.cat').text();
@@ -81,7 +81,6 @@
 
     projectsList.forEach(function(ele) {
       Project.portfolioItems.push(new Project(ele));
-      console.log('it ran');
     });
   };
 
@@ -98,7 +97,12 @@
       });
     }
   };
+
+  filters.getLinks = function(obj) {
+    var link = this.link;
+    filters.linkArray.push(link);
+  };
+
   module.Project = Project;
   module.filters = filters;
-  module.Handlebars = Handlebars;
 })(window);
