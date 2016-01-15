@@ -1,6 +1,6 @@
 /*put the nav bar in line to test responsiveness. Move Later.*/
 .display-inline, footer li {
-  display: inline;
+  display: inline-block;
 }
 
 .align-right {
