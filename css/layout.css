@@ -1,35 +1,35 @@
 /*put the nav bar in line to test responsiveness. Move Later.*/
-.display-inline, footer li {
-  display: inline-block;
-}
-
-.align-right {
-  text-align: right;
-}
-
 .main-nav ul {
   display: none;
 }
 
+.main-nav li {
+  text-align: right;
+}
+
 .main-nav a {
   font-size: 2rem;
 }
 
+footer li {
+  padding-right: 20%;
+}
+
 @media only screen and (min-width: 640px) {
   .main-nav ul {
-    display:block;
+    display:inline-block;
   }
 
   .main-nav li {
-    display: inline;
-    margin-left: 5%;
+
+    /*margin-left: 5%;*/
   }
 
 .main-nav a {
   font-size: 2rem;
+  padding-left: 30%;
 }
 
   .icon-menu {
     display:none;
   }
-}
