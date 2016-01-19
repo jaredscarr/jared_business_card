@@ -14,6 +14,7 @@
 
 footer li {
   display: inline-block;
+  padding-right: 2%;
 }
 
 @media only screen and (min-width: 640px) {
@@ -34,5 +35,5 @@ footer li {
   }
 
   footer li {
-    padding-right: 20%;
+    padding-right: 3%;
   }

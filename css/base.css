@@ -17,14 +17,20 @@
   HEX: B3FFEC*/
 
 html {
-  font-size: 62.5%;
+  /*font-size: 62.5%;*/
 }
 
 body {
   font-family: 'Dosis', 'Arial Narrow', Arial, sans-serif; /*have 400 and 700 weight*/
-  font-size: 1.4rem; /* =14px */
-  background-color: #B1B2B2;
-  color: #B25D41;
+  /*font-size: 1.4rem; /* =14px */*/
+  background: rgba(184,182,231,1);
+background: -moz-linear-gradient(top, rgba(184,182,231,1) 0%, rgba(195,187,232,1) 27%, rgba(207,198,235,1) 43%, rgba(226,223,246,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(184,182,231,1)), color-stop(27%, rgba(195,187,232,1)), color-stop(43%, rgba(207,198,235,1)), color-stop(100%, rgba(226,223,246,1)));
+background: -webkit-linear-gradient(top, rgba(184,182,231,1) 0%, rgba(195,187,232,1) 27%, rgba(207,198,235,1) 43%, rgba(226,223,246,1) 100%);
+background: -o-linear-gradient(top, rgba(184,182,231,1) 0%, rgba(195,187,232,1) 27%, rgba(207,198,235,1) 43%, rgba(226,223,246,1) 100%);
+background: -ms-linear-gradient(top, rgba(184,182,231,1) 0%, rgba(195,187,232,1) 27%, rgba(207,198,235,1) 43%, rgba(226,223,246,1) 100%);
+background: linear-gradient(to bottom, rgba(184,182,231,1) 0%, rgba(195,187,232,1) 27%, rgba(207,198,235,1) 43%, rgba(226,223,246,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8b6e7', endColorstr='#e2dff6', GradientType=0 );
 }
 
 img {
@@ -37,7 +43,7 @@ li {
 
 h1, h2, h3 {
   font-weight: 700;
-  font-size: 4rem; /* =24px */
+  /*font-size: 4rem; /* =24px */*/
 }
 
 a {
