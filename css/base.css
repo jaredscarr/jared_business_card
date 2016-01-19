@@ -17,20 +17,22 @@
   HEX: B3FFEC*/
 
 html {
+  height: 100%;
   /*font-size: 62.5%;*/
+  background: rgba(212,228,239,1);
+  background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
+  background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -o-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -ms-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: linear-gradient(to bottom, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0 );
 }
 
 body {
   font-family: 'Dosis', 'Arial Narrow', Arial, sans-serif; /*have 400 and 700 weight*/
-  /*font-size: 1.4rem; /* =14px */*/
-  background: rgba(184,182,231,1);
-background: -moz-linear-gradient(top, rgba(184,182,231,1) 0%, rgba(195,187,232,1) 27%, rgba(207,198,235,1) 43%, rgba(226,223,246,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(184,182,231,1)), color-stop(27%, rgba(195,187,232,1)), color-stop(43%, rgba(207,198,235,1)), color-stop(100%, rgba(226,223,246,1)));
-background: -webkit-linear-gradient(top, rgba(184,182,231,1) 0%, rgba(195,187,232,1) 27%, rgba(207,198,235,1) 43%, rgba(226,223,246,1) 100%);
-background: -o-linear-gradient(top, rgba(184,182,231,1) 0%, rgba(195,187,232,1) 27%, rgba(207,198,235,1) 43%, rgba(226,223,246,1) 100%);
-background: -ms-linear-gradient(top, rgba(184,182,231,1) 0%, rgba(195,187,232,1) 27%, rgba(207,198,235,1) 43%, rgba(226,223,246,1) 100%);
-background: linear-gradient(to bottom, rgba(184,182,231,1) 0%, rgba(195,187,232,1) 27%, rgba(207,198,235,1) 43%, rgba(226,223,246,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8b6e7', endColorstr='#e2dff6', GradientType=0 );
+  /*font-size: 1.4rem; /* =14px */
+  color: #2f4f4f;
 }
 
 img {
@@ -52,5 +54,6 @@ a {
 }
 
 a:hover {
-  color: #B3FFEC;
+  color: #000080;
+  font-weight: 700;
 }

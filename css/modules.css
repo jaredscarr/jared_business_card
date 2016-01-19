@@ -7,12 +7,16 @@
 }
 
 .icon-menu {
-  width: 30%;
   margin-left: 95%;
 }
 
+#drop-down {
+  font-size: 3rem;
+}
+
 .icon-menu:hover {
-  color: #FFE0D6;
+  color: #000080;
+  font-size: 3.5rem;
 }
 
 .color-palette {
@@ -22,9 +26,9 @@
 }
 
 /*need new profile pic and make it larger*/
-#profilePic {  
+/*#profilePic {
   height: 30rem;
-}
+}*/
 
 #one {
   background-color: #B25D41;
