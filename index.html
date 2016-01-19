@@ -56,10 +56,15 @@
             <div>{{{image}}}</div>
           </article>
         </script>
+        <script id="repo-template" type="text/x-handlebars-template">
+          <li>{{name}}</li>
+        </script>
       </section>
       <section id="about" class="tab-content">
           <h2>Jared Scarr</h2>
           <img src="img/profilepic2.jpg" alt="profile pic" id="profilePic">
+          <ul>
+          </ul>
     </section>
     <!-- <section>
         <div class="color-palette" id="one">#B25D41</div>
@@ -80,12 +85,17 @@
     <script src="vendor/jquery-1.11.3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script src="/vendor/scripts/page.js"></script>
+
     <script src="/js/projects.js"></script>
     <script src="/js/projectView.js"></script>
     <script src="/js/stateChanges.js"></script>
     <script src="/js/homeController.js"></script>
     <script src="/js/aboutController.js"></script>
     <script src="/js/portfolioController.js"></script>
+
+    <script src="/js/githubToken.js"></script>
+    <script src="/js/repo.js"></script>
+    <script src="/js/repoView.js"></script>
     <script src="/js/routers.js"></script>
     <script>
       Project.fetchAll();
