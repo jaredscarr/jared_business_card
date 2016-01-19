@@ -24,6 +24,7 @@ body {
   font-family: 'Dosis', 'Arial Narrow', Arial, sans-serif; /*have 400 and 700 weight*/
   font-size: 1.4rem; /* =14px */
   background-color: #B1B2B2;
+  color: #B25D41;
 }
 
 img {
@@ -41,4 +42,9 @@ h1, h2, h3 {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #B3FFEC;
 }

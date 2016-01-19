@@ -9,7 +9,10 @@
 .icon-menu {
   width: 30%;
   margin-left: 95%;
-  color: #FF9877;
+}
+
+.icon-menu:hover {
+  color: #FFE0D6;
 }
 
 /*color tester*/
