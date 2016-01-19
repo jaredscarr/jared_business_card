@@ -7,7 +7,7 @@
 }
 
 .icon-menu {
-  margin-left: 95%;
+  margin-left: 90%;
 }
 
 #drop-down {
@@ -15,8 +15,8 @@
 }
 
 .icon-menu:hover {
-  color: #000080;
-  font-size: 3.5rem;
+  color: #000080; /*Navy Blue*/
+  /*font-size: 3.5rem;*/
 }
 
 .color-palette {

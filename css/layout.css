@@ -2,6 +2,8 @@
 .main-nav ul {
   display: none;
   text-align: right;
+  position: absolute;
+  margin-left: 80%;
 }
 
 .main-nav li {
