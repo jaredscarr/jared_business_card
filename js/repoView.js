@@ -10,15 +10,14 @@
 
   var render = function(repo) {
     console.log('render');
-    var template = Handlebars.compile($('#projects-template').text());
+    var template = Handlebars.compile($('#repo-template').text());
     return template(repo);
   };
 
   repoView.index = function() {
     ui();
-    console.log('repoViewIndex');
     $('#about ul').append(
-      repos.with('forks_count').map(render) //change this to capture all the repos
+      repos.all.map(render)
     );
   };
 
