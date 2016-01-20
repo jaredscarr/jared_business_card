@@ -3,7 +3,7 @@
     "title": "Note Fellows",
     "datePublished": "2015-11-25",
     "category": "collaboration",
-    "details": "Distraction free note taking. So you can focus on what is important. No formatting or other bells and whistles to pull your attention away. This note application was simply to put thought to written word. This was my first team project.",
+    "details": "My first collaboation. Myself and three other individuals had a week to create a simple note taking application.",
     "image": "<img src=\"img/notefellows.png\" alt=\"Note Fellows\"/>",
     "link": "<a href=\"http://clee46.github.io/note-fellows/\">NoteFellows</a>"
   },
@@ -11,24 +11,24 @@
     "title": "Vote Tracker",
     "datePublished": "2015-11-15",
     "category": "game",
-    "details": "'Vote for the place you would most like to visit!'",
+    "details": "A simple game that uses a randomly generated number to pull out two images from a selection of images and record an individuals choices. There selections could be saved in local storage for later use or cleared.",
     "image": "<img src=\"img/voteTracker.png\" alt=\"Which One Would You Choose?\"/>",
-    "link": "<a href=\"https://github.com/jaredscarr/votetracker-jared\"></a>"
+    "link": "<a href=\"https://github.com/jaredscarr/votetracker-jared\">Vote Tracker on Github</a>"
   },
   {
     "title": "Snookie's Cookies",
     "datePublished": "2015-11-10",
     "category": "business",
-    "details": "Salmon cookies made with fish, salmon cookies are delish!",
+    "details": "Salmon cookies made with fish, salmon cookies are delish! This was a mock business sight and my second project at CodeFellow. There is a fish animation.",
     "image": "<img src=\"img/salmonCookies.png\" alt=\"Salmon Cookies\" />",
-    "link": "<a href=\"https://github.com/jaredscarr/cookie-standjared\"></a>"
+    "link": "<a href=\"https://github.com/jaredscarr/cookie-standjared\">Snookie's Cookie's on Github</a>"
   },
   {
     "title": "Guessing Game",
     "datePublished": "2015-11-05",
     "category": "game",
-    "details": "",
+    "details": "First web app! No styling, nothing. However, it does show how far I have come.",
     "image": "<img src=\"img/guessingGame.png\" alt=\"Guessing Game\" />",
-    "link": "<a href=\"https://github.com/jaredscarr/guessing-game\"></a>"
+    "link": "<a href=\"https://github.com/jaredscarr/guessing-game\">Visit the Guessing Game on Github</a>"
   }
 ]
