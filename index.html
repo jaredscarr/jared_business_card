@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Business Card</title>
-    <link rel="stylesheet" href="vendor/normalize.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/modules.css">
-    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="/vendor/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="/vendor/Skeleton-2.0.4/css/skeleton.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/modules.css">
+    <link rel="stylesheet" href="/css/icons.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header>
-      <h2>Name</h2>
-      <h4>slogan</h4>
-      <nav class="main-nav align-right">
-        <a href="#" id="drop-down" class="icon-menu align-right"></a>
-          <ul class="align-right">
-            <li class="tab" data-content="main"><a href="#">Home</a></li>
-            <li class="tab" data-content="portfolio"><a href="#">Projects</a></li>
-            <li class="tab" data-content="image-nav"><a href="#">ImageNavTest</a></li>
-            <li class="tab" data-content="about"><a href="#">About</a></li>
+      <nav class="main-nav">
+        <a href="#" id="drop-down" class="icon-menu"></a>
+          <ul>
+            <li class="tab" data-content="main"><a href="/">Home</a></li>
+            <li class="tab" data-content="portfolio"><a href="/portfolio">Projects</a></li>
+            <!-- <li class="tab" data-content="image-nav"><a href="#">ImageNavTest</a></li> -->
+            <li class="tab" data-content="about"><a href="/about">About</a></li>
           </ul>
       </nav>
     </header>
@@ -56,27 +56,47 @@
             <div>{{{image}}}</div>
           </article>
         </script>
+        <script id="repo-template" type="text/x-handlebars-template">
+          <li><a href="{{html_url}}">{{name}}</a></li>
+        </script>
       </section>
       <section id="about" class="tab-content">
-        <h1>About</h1>
-        <p>
-          Some text here!
-        </p>
+          <h2>Jared Scarr</h2>
+          <img src="img/profilepic2.jpg" alt="profile pic" id="profilePic">
+          <ul>
+          </ul>
     </section>
+    <!-- <section>
+        <div class="color-palette" id="one">#B25D41</div>
+        <div class="color-palette" id="two">#FFE0D6</div>
+        <div class="color-palette" id="three">#FF9877</div>
+        <div class="color-palette" id="four">#B1B2B2</div>
+        <div class="color-palette" id="five">#B3FFEC</div>
+    </section> -->
     </main>
     <footer>
-      <p>Copyright</p>
       <ul>
         <li><a class="icon-facebook2" href="#"></a></li>
         <li><a class="icon-twitter"href="#"></a></li>
         <li><a class="icon-github" href="#"></a></li>
+        <li>Copyright</li>
       </ul>
     </footer>
-    <script src="js/jquery-1.11.3.js"></script>
+    <script src="vendor/jquery-1.11.3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="js/projectView.js"></script>
-    <script src="js/stateChanges.js"></script>
+    <script src="/vendor/scripts/page.js"></script>
+
+    <script src="/js/projects.js"></script>
+    <script src="/js/projectView.js"></script>
+    <script src="/js/stateChanges.js"></script>
+    <script src="/js/homeController.js"></script>
+    <script src="/js/aboutController.js"></script>
+    <script src="/js/portfolioController.js"></script>
+
+    <script src="/js/githubToken.js"></script>
+    <script src="/js/repo.js"></script>
+    <script src="/js/repoView.js"></script>
+    <script src="/js/routers.js"></script>
     <script>
       Project.fetchAll();
     </script>

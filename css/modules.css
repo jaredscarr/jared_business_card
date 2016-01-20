@@ -2,18 +2,54 @@
   display: none;
 }
 
-.visible {
-  display: block;
-}
-
 .social-menu {
 
 }
 
 .icon-menu {
-  width: 20%;
+  margin-left: 90%;
 }
 
+#drop-down {
+  font-size: 3rem;
+}
+
+.icon-menu:hover {
+  color: #000080; /*Navy Blue*/
+  /*font-size: 3.5rem;*/
+}
+
+.color-palette {
+  display: block;
+  height: 15rem;
+  width: 40%;
+}
+
+/*need new profile pic and make it larger*/
+/*#profilePic {
+  height: 30rem;
+}*/
+
+#one {
+  background-color: #B25D41;
+  color: #FFE0D6;
+}
+
+#two {
+  background-color: #FFE0D6;
+}
+
+#three {
+  background-color: #FF9877;
+}
+
+#four {
+  background-color: #B1B2B2;
+}
+
+#five {
+  background-color: #B3FFEC;
+}
 /*color tester*/
 /*Initial Color Scheme Choices:
 

@@ -17,28 +17,43 @@
   HEX: B3FFEC*/
 
 html {
-  font-size: 62.5%;
+  height: 100%;
+  /*font-size: 62.5%;*/
+  background: rgba(212,228,239,1);
+  background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
+  background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -o-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: -ms-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  background: linear-gradient(to bottom, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0 );
 }
 
 body {
   font-family: 'Dosis', 'Arial Narrow', Arial, sans-serif; /*have 400 and 700 weight*/
-  font-size: 1.4rem; /* =14px */
-  background-color: #B1B2B2;
+  /*font-size: 1.4rem; /* =14px */
+  color: #2f4f4f; /*Dark Grey*/
 }
 
 img {
-  max-width: 100%;
+  max-width: 100%
 }
 
 li {
   list-style: none;
 }
 
-h1 h2 h3 {
+h1, h2, h3 {
   font-weight: 700;
-  font-size: 2.4rem; /* =24px */
+  /*font-size: 4rem; /* =24px */*/
 }
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #0080ff;
+  /*font-weight: 700;*/
 }

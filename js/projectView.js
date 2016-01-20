@@ -82,12 +82,10 @@
     var arrayOfImages = Project.portfolioItems.map(function(obj) {
       return obj.image;
     });
-    console.log(arrayOfImages);
 
     var stringifiedLinks = arrayOfImages.reduce(function(prev, current) {
       return prev + '<li>' + current + '</i>';
     }, '');
-    console.log('<ul>' + stringifiedLinks + '</ul>');
     $('#image-nav').append('<ul>' + stringifiedLinks + '</ul>');
   };
 
