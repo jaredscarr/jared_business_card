@@ -9,7 +9,6 @@
   };
 
   var render = function(repo) {
-    console.log('render');
     var template = Handlebars.compile($('#repo-template').text());
     return template(repo);
   };
