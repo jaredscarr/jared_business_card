@@ -22,7 +22,7 @@
     $('#portfolio').on('click', 'a.read-on', function(e) {
       e.preventDefault();
       $(this).parent().find('*').slideDown();
-      $(this).hide();
+      $('.read-on').hide();
       $('.read-less').show();
     });
   };
@@ -30,8 +30,9 @@
   stateChange.truncateProject = function () {
     $('.read-less').hide();
     $('#portfolio').on('click', 'a.read-less', function(e) {
-      $(this).hide();
+      e.preventDefault();
       $('.project-body').slideUp();
+      $('.read-less').hide();
       $('.read-on').show();
     });
   };
