@@ -41,20 +41,24 @@
           </ul>
         </div>
         <script id="project-template" type="text/x-handlebars-template">
-          <article data-category="{{category}}">
-            <header>
-              <h1>{{title}}</h1>
-              <ul>
-                <li><time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time></li>
-                <li><p class="cat">{{category}}</p></li>
-              </ul>
-            </header>
-            <section class="project-body">{{{details}}}</section>
-            <address class="project-body">Visit <a href="{{link}}">{{{link}}}</a></address>
-            <a href="#" class="read-less">Less</a>
-            <a href="#" class="read-on">More</a>
-            <div>{{{image}}}</div>
-          </article>
+          <div class="row">
+            <article data-category="{{category}}">
+              <div class="one-half column">
+                <header>
+                  <h1>{{title}}</h1>
+                  <ul>
+                    <li><time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time></li>
+                    <li><p class="cat">{{category}}</p></li>
+                  </ul>
+                </header>
+                <section class="project-body">{{{details}}}</section>
+                <address class="project-body">Visit <a href="{{link}}">{{{link}}}</a></address>
+              </div>
+              <div class="one-half column">
+                <div>{{{image}}}</div>
+              </div>
+            </article>
+          </div>
         </script>
         <script id="repo-template" type="text/x-handlebars-template">
           <li><a href="{{html_url}}">{{name}}</a></li>
@@ -93,7 +97,6 @@
     <script src="/js/aboutController.js"></script>
     <script src="/js/portfolioController.js"></script>
 
-    <script src="/js/githubToken.js"></script>
     <script src="/js/repo.js"></script>
     <script src="/js/repoView.js"></script>
     <script src="/js/routers.js"></script>
