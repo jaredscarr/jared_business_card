@@ -1,6 +1,7 @@
 (function(module) {
   var filters = {};
   Project.portfolioItems = [];
+  var projectsList = [];
 
   function Project (project) {
     this.title = project.title;
@@ -25,12 +26,9 @@
       $('#portfolio').append(a.toHtml());
     });
     stateChange.initToggling();
-    Project.prototype.loadImages();
+    // Project.prototype.loadImages();
   };
 
-
-  //new code added
-  //this function will take lines 46 - 52 and add them to one functions
   Project.loadAll = function(data) {
     projectsList.sort(function(a,b) {
       return (new Date(b.datePublished)) - (new Date(a.datePublished));
@@ -41,32 +39,30 @@
     });
   };
 
-  //this will retrieve the data from the local source, process it and hand of control to the view
   Project.fetchAll = function() {
     if (localStorage.data) {
       Project.loadAll(JSON.parse(localStorage.data));
-      Project.initIndexPage(); //need to figure out what to name this and why
+      Project.initIndexPage();
     } else {
       $.getJSON('data/projects.json', function(data) {
+        projectsList = data;
         Project.loadAll(data);
         localStorage.data = JSON.stringify(data);
-        Project.initIndexPage(); //need to figure out what to name this and why
+        Project.initIndexPage();
       });
     }
   };
-  //filter images out of objects into a new array using map
-  Project.prototype.loadImages = function() {
-    var arrayOfImages = Project.portfolioItems.map(function(obj) {
-      return obj.image;
-    });
-
-    var stringifiedLinks = arrayOfImages.reduce(function(prev, current) {
-      return prev + '<li>' + current + '</i>';
-    }, '');
-    $('#image-nav').append('<ul>' + stringifiedLinks + '</ul>');
-  };
-
-  //reduce the new array into a string holding the image links
+  // //filter images out of objects into a new array using map
+  // Project.prototype.loadImages = function() {
+  //   var arrayOfImages = Project.portfolioItems.map(function(obj) {
+  //     return obj.image;
+  //   });
+  //
+  //   var stringifiedLinks = arrayOfImages.reduce(function(prev, current) {
+  //     return prev + '<li>' + current + '</i>';
+  //   }, '');
+  //   $('#image-nav').append('<ul>' + stringifiedLinks + '</ul>');
+  // };
 
   module.Project = Project;
   module.filters = filters;
