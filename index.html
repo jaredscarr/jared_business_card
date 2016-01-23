@@ -31,30 +31,25 @@
       </section>
       <section id="image-nav" class="tab-content"></section>
       <section id="portfolio" class="tab-content">
-        <div>
-          <ul id="filter">
-            <li>
-              <select id="category-filter">
-                <option value="">-- Filter by Categories --</option>
-              </select>
-            </li>
-          </ul>
-        </div>
         <script id="project-template" type="text/x-handlebars-template">
-          <article data-category="{{category}}">
-            <header>
-              <h1>{{title}}</h1>
-              <ul>
-                <li><time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time></li>
-                <li><p class="cat">{{category}}</p></li>
-              </ul>
-            </header>
-            <section class="project-body">{{{details}}}</section>
-            <address class="project-body">Visit <a href="{{link}}">{{{link}}}</a></address>
-            <a href="#" class="read-less">Less</a>
-            <a href="#" class="read-on">More</a>
-            <div>{{{image}}}</div>
-          </article>
+          <div class="row">
+            <article data-category="{{category}}">
+              <div class="one-half column">
+                <header>
+                  <h1>{{title}}</h1>
+                  <ul>
+                    <li><time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time></li>
+                    <li><p class="cat">{{category}}</p></li>
+                  </ul>
+                </header>
+                <section class="project-body">{{{details}}}</section>
+                <address class="project-body">Visit <a href="{{link}}">{{{link}}}</a></address>
+              </div>
+              <div class="one-half column">
+                <div>{{{image}}}</div>
+              </div>
+            </article>
+          </div>
         </script>
         <script id="repo-template" type="text/x-handlebars-template">
           <li><a href="{{html_url}}">{{name}}</a></li>
@@ -65,14 +60,7 @@
           <img src="img/profilepic2.jpg" alt="profile pic" id="profilePic">
           <ul>
           </ul>
-    </section>
-    <!-- <section>
-        <div class="color-palette" id="one">#B25D41</div>
-        <div class="color-palette" id="two">#FFE0D6</div>
-        <div class="color-palette" id="three">#FF9877</div>
-        <div class="color-palette" id="four">#B1B2B2</div>
-        <div class="color-palette" id="five">#B3FFEC</div>
-    </section> -->
+      </section>
     </main>
     <footer>
       <ul>

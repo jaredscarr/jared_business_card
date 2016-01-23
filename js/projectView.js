@@ -20,33 +20,10 @@
     $('#portfolio').append(html);
   };
 
-  filters.populateFilter = function() {
-    $('article').each(function() {
-      var val = $(this).find('.cat').text();
-      var optionTag = '<option value="' + val + '">' + val + '</option>';
-      if ($('#category-filter option[value="' + val + '"]').length === 0) {
-        $('#category-filter').append(optionTag);
-      }
-    });
-  };
-
-  filters.handleFilter = function() {
-    $('#category-filter').on('change', function() {
-      if ($(this).val()) {
-        $('article').hide();
-        $('article[data-category="' + $(this).val() + '"]').fadeIn();
-      } else {
-        $('article').fadeIn();
-      }
-    });
-  };
-
   Project.initIndexPage = function() {
     Project.portfolioItems.forEach(function(a){
       $('#portfolio').append(a.toHtml());
     });
-    filters.populateFilter();
-    filters.handleFilter();
     stateChange.initToggling();
     Project.prototype.loadImages();
   };
