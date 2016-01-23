@@ -2,8 +2,8 @@
   display: none;
 }
 
-.social-menu {
-
+.textAlignRight {
+  text-align: center;
 }
 
 .icon-menu {
@@ -24,8 +24,3 @@
   height: 15rem;
   width: 40%;
 }
-
-/*need new profile pic and make it larger*/
-/*#profilePic {
-  height: 30rem;
-}*/
