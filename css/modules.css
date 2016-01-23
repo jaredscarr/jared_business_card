@@ -15,7 +15,7 @@
 }
 
 .icon-menu:hover {
-  color: #000080; /*Navy Blue*/
+  color: #000080;
   /*font-size: 3.5rem;*/
 }
 
@@ -29,41 +29,3 @@
 /*#profilePic {
   height: 30rem;
 }*/
-
-#one {
-  background-color: #B25D41;
-  color: #FFE0D6;
-}
-
-#two {
-  background-color: #FFE0D6;
-}
-
-#three {
-  background-color: #FF9877;
-}
-
-#four {
-  background-color: #B1B2B2;
-}
-
-#five {
-  background-color: #B3FFEC;
-}
-/*color tester*/
-/*Initial Color Scheme Choices:
-
-  RGB: 178,93,65
-  HEX: B25D41
-
-  RGB: 255,224,214
-  HEX: FFE0D6
-
-  RGB: 255,152,119
-  HEX: FF9877
-
-  RGB: 177,178,178
-  HEX: B1B2B2
-
-  RGB: 179,255,236
-  HEX: B3FFEC*/
