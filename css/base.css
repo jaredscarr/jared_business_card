@@ -17,6 +17,14 @@ body {
   color: #2f4f4f;
 }
 
+nav {
+  padding-bottom: 7.5%;
+}
+
+article {
+  margin-bottom: 5%;
+}
+
 img {
   max-width: 100%
 }

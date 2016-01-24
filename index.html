@@ -20,53 +20,47 @@
           <ul>
             <li class="tab" data-content="main"><a href="/">Home</a></li>
             <li class="tab" data-content="portfolio"><a href="/portfolio">Projects</a></li>
-            <!-- <li class="tab" data-content="image-nav"><a href="#">ImageNavTest</a></li> -->
-            <li class="tab" data-content="about"><a href="/about">About</a></li>
           </ul>
       </nav>
     </header>
+    <script id="project-template" type="text/x-handlebars-template">
+      <div class="row">
+        <article data-category="{{category}}">
+          <div class="one-half column">
+            <header>
+              <h1>{{title}}</h1>
+              <ul>
+                <li><time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time></li>
+                <li><p class="cat">{{category}}</p></li>
+              </ul>
+            </header>
+            <section class="project-body">{{{details}}}</section>
+            <address class="project-body">Visit <a href="{{link}}">{{{link}}}</a></address>
+          </div>
+          <div class="one-half column">
+            <div class="articleImg">{{{image}}}</div>
+          </div>
+        </article>
+      </div>
+    </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li><a href="{{html_url}}">{{name}}</a></li> <!-- this is no longer connected to repos because I moved the section to the main but it's staged for deletion anyway-->
+    </script>
     <main>
       <section id="main" class="tab-content">
-        <h1>HOME</h1>
+        <h2>Jared Scarr</h2>
+        <div class="row">
+          <div class="four columns">
+            <img src="img/thumb_IMG_1419_1024.jpg" alt="profile pic" id="profilePic">
+          </div>
+          <div class="eight columns">
+            <ul class="textAlignRight">
+            </ul>
+          </div>
+        </div>
       </section>
       <section id="image-nav" class="tab-content"></section>
-      <section id="portfolio" class="tab-content">
-        <script id="project-template" type="text/x-handlebars-template">
-          <div class="row">
-            <article data-category="{{category}}">
-              <div class="one-half column">
-                <header>
-                  <h1>{{title}}</h1>
-                  <ul>
-                    <li><time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time></li>
-                    <li><p class="cat">{{category}}</p></li>
-                  </ul>
-                </header>
-                <section class="project-body">{{{details}}}</section>
-                <address class="project-body">Visit <a href="{{link}}">{{{link}}}</a></address>
-              </div>
-              <div class="one-half column">
-                <div>{{{image}}}</div>
-              </div>
-            </article>
-          </div>
-        </script>
-        <script id="repo-template" type="text/x-handlebars-template">
-          <li><a href="{{html_url}}">{{name}}</a></li>
-        </script>
-      </section>
-      <section id="about" class="tab-content">
-          <h2>Jared Scarr</h2>
-          <div class="row">
-            <div class="four columns">
-              <img src="img/thumb_IMG_1419_1024.jpg" alt="profile pic" id="profilePic">
-            </div>
-            <div class="eight columns">
-              <ul class="textAlignRight">
-              </ul>
-            </div>
-          </div>
-      </section>
+      <section id="portfolio" class="tab-content"></section>
     </main>
     <footer>
       <ul>
