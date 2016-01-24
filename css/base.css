@@ -1,7 +1,7 @@
 html {
   height: 100%;
   /*font-size: 62.5%;*/
-  background: rgba(212,228,239,1);
+  background: rgba(212,228,239,1) no repeat center center fixed;
   background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
   background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
@@ -17,9 +17,9 @@ body {
   color: #2f4f4f;
 }
 
-/*nav {
+nav {
   padding-bottom: 7.5%;
-}*/
+}
 
 article {
   margin-bottom: 5%;
@@ -28,6 +28,7 @@ article {
 img {
   max-width: 90%;
   margin: 0 auto;
+  padding-left: 5%;
 }
 
 li {
