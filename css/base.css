@@ -17,16 +17,17 @@ body {
   color: #2f4f4f;
 }
 
-nav {
+/*nav {
   padding-bottom: 7.5%;
-}
+}*/
 
 article {
   margin-bottom: 5%;
 }
 
 img {
-  max-width: 100%
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 li {
@@ -46,4 +47,8 @@ a {
 a:hover {
   color: #0080ff;
   /*font-weight: 700;*/
+}
+
+footer {
+  margin-top: 10%;
 }
