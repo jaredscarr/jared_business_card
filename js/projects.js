@@ -1,6 +1,6 @@
 var projectsList = [
   {
-    title: 'Note Fellows',
+    title: 'Note Fellows projects.js',
     datePublished: '2015-11-25',
     category: 'collaboration',
     details: 'Distraction free note taking. So you can focus on what is important. No formatting or other bells and whistles to pull your attention away. This note application was simply to put thought to written word. This was my first team project.',
