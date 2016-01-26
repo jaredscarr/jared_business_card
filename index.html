@@ -29,9 +29,6 @@
           <div class="one-half column">
             <header>
               <h1>{{title}}</h1>
-              <ul>
-                <!-- <li><time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time></li> -->
-              </ul>
             </header>
             <section class="project-body">{{{details}}}</section>
             <address class="project-body">Visit <a href="{{link}}">{{{link}}}</a></address>
@@ -41,9 +38,6 @@
           </div>
         </article>
       </div>
-    </script>
-    <script id="repo-template" type="text/x-handlebars-template">
-      <li><a href="{{html_url}}">{{name}}</a></li> <!-- this is no longer connected to repos because I moved the section to the main but it's staged for deletion anyway-->
     </script>
     <main>
       <section id="main" class="tab-content">
@@ -82,16 +76,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script src="/vendor/scripts/page.js"></script>
 
-    <script src="/js/projects.js"></script> <!-- this should be removed after JSON file linked properly-->
     <script src="/js/projectView.js"></script>
     <script src="/js/stateChanges.js"></script>
     <script src="/js/homeController.js"></script>
     <script src="/js/aboutController.js"></script>
     <script src="/js/portfolioController.js"></script>
-
-    <script src="/js/repo.js"></script> <!--repo.js and repoView.js can be removed -->
-    <script src="/js/repoView.js"></script>
-    <script src="/js/routers.js"></script>
     <script>
       Project.fetchAll();
     </script>
