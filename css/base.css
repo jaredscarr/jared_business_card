@@ -1,25 +1,7 @@
-/*color tester*/
-/*Initial Color Scheme Choices:
-
-  RGB: 178,93,65
-  HEX: B25D41
-
-  RGB: 255,224,214
-  HEX: FFE0D6
-
-  RGB: 255,152,119
-  HEX: FF9877
-
-  RGB: 177,178,178
-  HEX: B1B2B2
-
-  RGB: 179,255,236
-  HEX: B3FFEC*/
-
 html {
   height: 100%;
   /*font-size: 62.5%;*/
-  background: rgba(212,228,239,1);
+  background: rgba(212,228,239,1) no repeat center center fixed;
   background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
   background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,1) 100%);
@@ -32,11 +14,21 @@ html {
 body {
   font-family: 'Dosis', 'Arial Narrow', Arial, sans-serif; /*have 400 and 700 weight*/
   /*font-size: 1.4rem; /* =14px */
-  color: #2f4f4f; /*Dark Grey*/
+  color: #2f4f4f;
+}
+
+nav {
+  padding-bottom: 7.5%;
+}
+
+article {
+  margin-bottom: 5%;
 }
 
 img {
-  max-width: 100%
+  max-width: 90%;
+  margin: 0 auto;
+  padding-left: 5%;
 }
 
 li {
@@ -56,4 +48,8 @@ a {
 a:hover {
   color: #0080ff;
   /*font-weight: 700;*/
+}
+
+footer {
+  margin-top: 10%;
 }

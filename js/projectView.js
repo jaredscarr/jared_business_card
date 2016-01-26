@@ -32,11 +32,11 @@
   //new code added
   //this function will take lines 46 - 52 and add them to one functions
   Project.loadAll = function(data) {
-    projectsList.sort(function(a,b) {
+    data.sort(function(a,b) {
       return (new Date(b.datePublished)) - (new Date(a.datePublished));
     });
 
-    projectsList.forEach(function(ele) {
+    data.forEach(function(ele) {
       Project.portfolioItems.push(new Project(ele));
     });
   };

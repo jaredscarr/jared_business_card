@@ -20,47 +20,49 @@
           <ul>
             <li class="tab" data-content="main"><a href="/">Home</a></li>
             <li class="tab" data-content="portfolio"><a href="/portfolio">Projects</a></li>
-            <!-- <li class="tab" data-content="image-nav"><a href="#">ImageNavTest</a></li> -->
-            <li class="tab" data-content="about"><a href="/about">About</a></li>
           </ul>
       </nav>
     </header>
+    <script id="project-template" type="text/x-handlebars-template">
+      <div class="row">
+        <article data-category="{{category}}">
+          <div class="one-half column">
+            <header>
+              <h1>{{title}}</h1>
+            </header>
+            <section class="project-body">{{{details}}}</section>
+            <address class="project-body">Visit <a href="{{link}}">{{{link}}}</a></address>
+          </div>
+          <div class="one-half column">
+            <div class="articleImg">{{{image}}}</div>
+          </div>
+        </article>
+      </div>
+    </script>
     <main>
       <section id="main" class="tab-content">
-        <h1>HOME</h1>
+        <div class="row marginTop15per">
+          <div class="one column"></div>
+          <div class="three columns">
+            <img src="img/thumb_IMG_1419_1024.jpg" alt="profile pic" id="profilePic">
+          </div>
+          <div class="seven columns marginTop15per">
+            <!-- start slipsum code -->
+
+            <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+            <p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+            <p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+            <!-- please do not remove this line -->
+            <div style="display:none;">
+            <a href="http://slipsum.com">lorem ipsum</a></div>
+
+            <!-- end slipsum code -->
+          </div>
+          <div class="one columns"></div>
+        </div>
       </section>
       <section id="image-nav" class="tab-content"></section>
-      <section id="portfolio" class="tab-content">
-        <script id="project-template" type="text/x-handlebars-template">
-          <div class="row">
-            <article data-category="{{category}}">
-              <div class="one-half column">
-                <header>
-                  <h1>{{title}}</h1>
-                  <ul>
-                    <li><time pubdate datetime="{{datePublished}}" title="{{datePublished}}">{{publishStatus}}</time></li>
-                    <li><p class="cat">{{category}}</p></li>
-                  </ul>
-                </header>
-                <section class="project-body">{{{details}}}</section>
-                <address class="project-body">Visit <a href="{{link}}">{{{link}}}</a></address>
-              </div>
-              <div class="one-half column">
-                <div>{{{image}}}</div>
-              </div>
-            </article>
-          </div>
-        </script>
-        <script id="repo-template" type="text/x-handlebars-template">
-          <li><a href="{{html_url}}">{{name}}</a></li>
-        </script>
-      </section>
-      <section id="about" class="tab-content">
-          <h2>Jared Scarr</h2>
-          <img src="img/profilepic2.jpg" alt="profile pic" id="profilePic">
-          <ul>
-          </ul>
-      </section>
+      <section id="portfolio" class="tab-content"></section>
     </main>
     <footer>
       <ul>
@@ -74,16 +76,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
     <script src="/vendor/scripts/page.js"></script>
 
-    <script src="/js/projects.js"></script>
     <script src="/js/projectView.js"></script>
     <script src="/js/stateChanges.js"></script>
     <script src="/js/homeController.js"></script>
     <script src="/js/aboutController.js"></script>
     <script src="/js/portfolioController.js"></script>
-
-    <script src="/js/repo.js"></script>
-    <script src="/js/repoView.js"></script>
-    <script src="/js/routers.js"></script>
     <script>
       Project.fetchAll();
     </script>

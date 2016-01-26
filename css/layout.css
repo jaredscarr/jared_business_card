@@ -14,12 +14,24 @@
   font-size: 2rem;
 }
 
+.marginTop15per {
+  margin-top: 15%;
+}
+
+article address {
+  margin-top: 3%;
+}
+
 footer li {
   display: inline-block;
   padding-right: 2%;
 }
 
 @media only screen and (min-width: 640px) {
+
+  nav {
+    padding-bottom: 10%;
+  }
   .main-nav ul {
     display:inline-block;
   }
@@ -30,10 +42,15 @@ footer li {
 
 .main-nav a {
   font-size: 2rem;
+  padding-left: 20%;
 }
 
   .icon-menu {
     display:none;
+  }
+
+  .marginTop15per {
+    margin-top: 0%;
   }
 
   footer li {
